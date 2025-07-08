@@ -1,0 +1,181 @@
+/* === HERO COMBO === */
+.hero_combo {
+    position: relative;
+    width: 100%;
+    height: 620px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero_combo video {
+    height: 620px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.overlay_combo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(36, 36, 36, 0.5);
+    z-index: 1;
+}
+
+.hero-content_combo {
+    position: relative;
+    z-index: 2;
+}
+
+/* === COMBO GERAL === */
+.combogeral-section {
+    padding-top: 120px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.combogeral-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 0 auto;
+}
+
+.combogeral-left {
+    display: flex;
+    flex-direction: column;
+}
+
+/* === BENEFÍCIOS === */
+.beneficios-section {
+    display: flex;
+    flex-direction: column;
+    padding-top: 120px;
+}
+
+.beneficio-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+.beneficio-card.reverse {
+    flex-direction: row-reverse;
+}
+
+.beneficio-img {
+    flex: 1 1 50%;
+    min-height: 300px;
+}
+
+.beneficio-img img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    display: block;
+}
+
+.beneficio-text {
+    flex: 1 1 50%;
+    height: 520px;
+    padding: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dark-bg {
+    background-color: #f6f6f6;
+}
+
+.beneficio-text p {
+    margin-top: 22px;
+}
+
+.btn_combogeral {
+    margin-top: 64px;
+}
+
+.btn_combogeral_gold {
+    align-self: flex-start;
+}
+
+.contato-section {
+    margin-bottom: 120px;
+}
+
+/* ========== TABLET: até 991px ========== */
+@media (max-width: 991px) {
+    .hero_combo {
+        height: 520px;
+    }
+
+    .background-video,
+    .hero_combo video {
+        height: 520px;
+    }
+
+    .overlay_combo {
+        height: 520px;
+    }
+
+    .hero-content_combo h1 {
+        text-align: left;
+        font-size: 28px;
+        padding-left: 44px;
+        padding-right: 44px;
+    }
+
+    .combogeral-section {
+        padding-top: 80px;
+        padding-left: 44px;
+        padding-right: 44px;
+    }
+
+    .subtitulo-geral {
+        margin-top: 12px;
+    }
+
+    .combogeral-container {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+
+    .beneficio-card {
+        flex-direction: column;
+    }
+
+    .beneficio-card.reverse {
+        flex-direction: column;
+    }
+
+    .beneficio-img img {
+        height: 300px;
+    }
+
+    .beneficio-text {
+        height: auto;
+        padding: 60px 40px;
+        text-align: left;
+        align-items: left;
+    }
+
+    .btn_combogeral_gold {
+        align-self: left;
+        margin-top: -10px;
+    }
+}

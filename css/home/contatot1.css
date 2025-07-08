@@ -1,0 +1,136 @@
+.contato-section {
+    padding-top: 120px;
+    padding-left: 80px;
+    padding-right: 80px;
+    justify-items: center;
+}
+
+.contato-titulo {
+    width: 520px;
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.contato-subtitulo {
+    margin-bottom: 64px;
+}
+
+.form-container {
+    background-color: #f6f6f6;
+    border-radius: 20px;
+    padding: 40px 30px;
+    max-width: 520px;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.form-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 44px;
+}
+
+.formulario-contato input,
+.formulario-contato textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: none;
+    border-radius: 30px;
+    background-color: #dddddd;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    color: #121212;
+    outline: none;
+    resize: none;
+}
+
+.formulario-contato textarea {
+    border-radius: 20px;
+}
+
+.btn-enviar {
+    background-color: #C49E32;
+    color: #f6f6f6;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #DCBB4F;
+}
+
+.form_enviar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsivo */
+
+/* ====== TABLET: até 991px ====== */
+@media (max-width: 991px) {
+    .contato-section {
+        padding: 80px 40px;
+    }
+
+    .contato-titulo {
+        width: 100%;
+        font-size: 22px;
+    }
+
+    .contato-subtitulo {
+        font-size: 16px;
+    }
+
+    .form-container {
+        max-width: 100%;
+        padding: 30px 25px;
+    }
+}
+
+/* ====== CELULAR: até 600px ====== */
+@media (max-width: 600px) {
+    .contato-section {
+        padding-top: 80px;
+        padding-left: 44px;
+        padding-right: 44px;
+    }
+
+    .contato-titulo {
+        font-size: 32px;
+    }
+
+    .contato-subtitulo {
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .form-titulo {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .form-container {
+        padding: 25px 20px;
+    }
+
+    .formulario-contato input,
+    .formulario-contato textarea {
+        font-size: 13px;
+        padding: 12px 16px;
+    }
+
+    .btn-enviar {
+        width: 100%;
+        font-size: 13px;
+        padding: 12px;
+    }
+}

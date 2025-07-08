@@ -1,0 +1,24 @@
+/*UTILIDADES*/
+
+@import "./utilidades/cores.css";
+@import "./utilidades/tipografia.css";
+
+/*GLOBAL*/
+
+@import "./global/header.css";
+@import "./global/global.css";
+@import "./global/footer.css";
+
+/*HOME*/
+@import "./home/hero.css";
+@import "./home/mult.css";
+@import "./home/clientes.css";
+@import "./home/banner.css";
+@import "./home/combo.css";
+@import "./home/parceiros.css";
+@import"./home/sobrenos.css";
+@import"./home/contatot1.css";
+
+/* COMBO GERAL */
+@import"./combo/combogeral.css";
+@import "./combo/farmacia.css";

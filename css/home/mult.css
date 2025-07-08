@@ -1,0 +1,213 @@
+.multibeneficios-section {
+    padding-top: 120px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+
+.container-multibeneficios {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.multibeneficios-left {
+    max-width: 360px;
+}
+
+.multibeneficios-right {
+    flex: 1;
+    max-width: 640px;
+}
+
+.multibeneficios-left p {
+    margin-top: 22px;
+}
+
+.btn_geralbranco {
+    margin-top: 44px;
+}
+
+.btn-customgeral_white {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding-right: 24px;
+    height: 44px;
+    background-color: #f6f6f6;
+    color: #C49E32;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding-left: 4px;
+}
+
+.icon-circlegeralgold {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 50%;
+    background-color: #C49E32;
+    color: #f6f6f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    transition: transform 0.3s ease;
+    font-size: 16px;
+    margin-left: 0;
+}
+
+.arrow-icongeral {
+    font-style: normal;
+    line-height: 1;
+    display: inline-block;
+    font-weight: bold;
+    transform: translateY(-1px);
+}
+
+.btn-customgeral_white .text {
+    white-space: nowrap;
+}
+
+.btn-customgeral_white:hover .icon-circlegeralgold {
+    transform: translateX(4px);
+}
+
+.btn-customgeral_white:hover {
+    background-color: #f6f6f6;
+}
+
+
+/* card */
+
+.carousel-container {
+    overflow: hidden;
+    margin-top: 80px;
+}
+
+.card-carousel {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+}
+
+.card-item {
+    flex: 0 0 calc((100% - 72px) / 4);
+    height: 300px;
+    border-radius: 25px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    align-items: flex-end;
+}
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    border-radius: 25px;
+    background: linear-gradient(180deg, rgba(24, 24, 24, 0.47) 0%, #000 100%);
+    transition: background 0.3s ease;
+    z-index: 1;
+}
+
+/* Hover amarelo translúcido */
+.card-item:hover .card-overlay {
+    background: rgba(201, 160, 56, 0.7);
+}
+
+/* Título branco em cima da imagem */
+.card-title {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+.card-item:hover .card-title {
+    color: #181818;
+}
+
+/* === RESPONSIVIDADE === */
+
+/* Tablets (até 1024px) */
+@media (max-width: 1024px) {
+    .multibeneficios-section {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 80px;
+    }
+
+    .container-multibeneficios {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .multibeneficios-left,
+    .multibeneficios-right {
+        max-width: 100%;
+    }
+
+    .card-carousel {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .card-item {
+        flex: 0 0 calc((100% - 16px) / 2);
+        /* 2 cards por linha */
+        height: 260px;
+    }
+}
+
+@media (max-width: 768px) {
+    .multibeneficios-section {
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 60px;
+    }
+
+    .btn_geralbranco {
+        margin-top: 24px;
+    }
+
+    .card-carousel {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 16px;
+    }
+
+    .card-item {
+        width: calc(50% - 8px);
+        height: 220px;
+        flex: none;
+    }
+
+    .card-title {
+        font-size: 1rem;
+        left: 16px;
+        bottom: 16px;
+    }
+
+    .btn-customgeral_white {
+        font-size: 0.7rem;
+        height: 40px;
+        padding-right: 20px;
+    }
+
+    .icon-circlegeralgold {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+        margin-right: 10px;
+    }
+}

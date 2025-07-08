@@ -1,0 +1,110 @@
+.clientes-section {
+    padding-top: 120px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.clientes-section p {
+    margin-top: 22px;
+}
+
+.decoracao-linha {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 120px;
+}
+
+.linha-horizontal-amarela {
+    height: 2px;
+    width: 100%;
+    background-color: #C49E32;
+}
+
+/* CONTAINER VISUAL DO CARROSSEL */
+.clientes-carousel-wrapper {
+    margin-top: 64px;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    /* <- substitui center por flex-start */
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+
+/* FAIXA COM OS LOGOS */
+.clientes-carousel {
+    display: flex;
+    gap: 24px;
+    transition: all 0.5s ease;
+}
+
+/* CADA LOGO */
+.clientes-carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.clientes-carousel {
+    display: flex;
+    gap: 24px;
+    transition: all 0.5s ease;
+}
+
+/* Bloco branco onde a logo fica centralizada */
+/* DESKTOP - logos fixos 160x64px */
+.clientes-carousel img {
+    width: 160px;
+    height: 64px;
+    background-color: #f6f6f6;
+    padding: 12px;
+    border-radius: 12px;
+    object-fit: contain;
+    object-position: center;
+    flex-shrink: 0;
+    display: none;
+    /* controlado pelo JS */
+}
+
+/* Responsivo TABLET */
+@media (max-width: 1024px) {
+    .clientes-section {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 80px;
+    }
+
+    .clientes-carousel {
+        gap: 16px;
+    }
+
+    .clientes-carousel img {
+        width: 120px;
+        height: 64px;
+        padding: 10px;
+    }
+}
+
+/* Responsivo CELULAR */
+@media (max-width: 768px) {
+    .clientes-carousel {
+        gap: 12px;
+    }
+
+    .clientes-carousel img {
+        width: 100px;
+        height: 64px;
+        padding: 8px;
+    }
+
+    .clientes-subtitle {
+        font-size: 14px;
+    }
+
+    .clientes-title {
+        font-size: 20px;
+    }
+}

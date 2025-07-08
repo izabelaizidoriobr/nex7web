@@ -1,0 +1,207 @@
+/* Navbar fixada */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background: transparent;
+    padding: 32px 80px;
+}
+
+/* Container */
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Logo */
+.logo img {
+    height: 36px;
+}
+
+/* BOTÃO MENU TOGGLE */
+.menu-toggle {
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 40px;
+}
+
+/* Desenha as três barras */
+.menu-toggle::before {
+    content: "☰";
+    font-size: 2rem;
+    color: white;
+}
+
+/* Ícone X */
+.menu-toggle.open::before {
+    content: "✕";
+}
+
+/* Menu padrão (desktop) */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #c9a038;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-white,
+.btn-gold {
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-white {
+    border: 1px solid #f6f6f6;
+    background: transparent;
+    color: #f6f6f6;
+}
+
+.btn-white:hover {
+    background: #f6f6f6;
+    color: #181818;
+}
+
+.btn-gold {
+    background-color: #c9a038;
+    color: #181818;
+}
+
+.btn-gold:hover {
+    background-color: #b18b30;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1024px) {
+
+    .navbar {
+        padding: 24px 44px;
+        align-items: center;
+        background: #181818;
+    }
+
+    .nav-content {
+        position: relative;
+    }
+
+    /* Botão do menu (burger/X) */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 24px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 32px;
+        height: 32px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .menu-toggle::before {
+        content: "☰";
+        font-size: 2rem;
+        color: white;
+    }
+
+    .menu-toggle.open::before {
+        content: "✕";
+    }
+
+    /* Menu oculto inicialmente */
+    .nav-menu {
+        margin-top: 24px;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #181818;
+        padding: 16px 24px;
+        border-top: 1px solid #333;
+        z-index: 998;
+    }
+
+    /* Mostrar menu quando .open */
+    .nav-content.open .nav-menu {
+        display: flex;
+    }
+
+    /* Links do menu em coluna */
+    .nav-links {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .nav-links li {
+        list-style: none;
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        display: block;
+        width: 100%;
+    }
+
+    /* Botões abaixo dos links */
+    .nav-buttons {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 20px;
+        width: 100%;
+        padding: 0;
+    }
+
+    .btn-white,
+    .btn-gold {
+        width: fit-content;
+    }
+
+    /* Logo levemente menor no mobile (opcional) */
+    .logo img {
+        height: 30px;
+    }
+}

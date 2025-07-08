@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="./img/icones/fiveIcon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Nex7 - Home Page</title>
+</head>
+
+<body>
+
+    <!--NAVBAR-->
+    <header class="navbar">
+        <div class="container nav-content" id="nav-container">
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <img src="./img/logonex7/logopadraobr.svg" alt="Logo Grupo NEX7" />
+            </a>
+
+            <!-- Botão Menu Toggle -->
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu"></button>
+
+            <!-- Menu -->
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#" class="cor-b0 font-title-s">SOBRE NÓS</a></li>
+                    <li><a href="#" class="cor-b0 font-title-s">PARCEIROS</a></li>
+                    <li><a href="#" class="cor-b0 font-title-s">CLIENTES</a></li>
+                    <li><a href="#" class="cor-b0 font-title-s">CARTÕES BENEFÍCIOS</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="#" class="btn-white cor-b0 font-title-s">CONTATO</a>
+                    <a href="#" class="btn-gold cor-b0 font-title-s">SOLICITAR PROPOSTA</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <img class="hero-bg" src="./img/home/hero.png" alt="Fundo Hero" />
+        <div class="overlay"></div>
+
+        <div class="hero-content container">
+            <h1 class="cor-b0 font-title-xl">
+                Soluções Financeiras <br />
+                Inteligentes para o Seu <span class="highlight cor-c2">Dia a Dia</span>
+            </h1>
+            <p class="cor-b3 font-text-m">
+                Cartões Multibenefícios, Crédito Pessoal e Empresarial — tudo em um só lugar, com segurança e agilidade.
+            </p>
+            <div class="hero-buttons">
+                <!-- Botão Dourado -->
+                <a href="#" class="btn-custom gold cor-b0 font-title-s">
+                    <span class="icon-circle white">
+                        <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </span>
+                    <span class="text">CARTÕES BENEFÍCIOS</span>
+                </a>
+
+                <!-- Botão Branco -->
+                <a href="#" class="btn-custom white font-title-s cor-c2">
+                    <span class="icon-circle gold">
+                        <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </span>
+                    <span class="text">ENTRAR EM CONTATO</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!--SERVIÇOS-->
+    <section class="multibeneficios-section">
+        <div class="container-multibeneficios">
+            <div class="multibeneficios-left">
+                <h2 class="title font-title-l cor-b0">CARTÕES MULTIBENEFÍCIOS</h2>
+                <p class="subtitle font-text-m cor-b3">Soluções completas para motivar sua equipe e simplificar a gestão
+                    de
+                    benefícios</p>
+            </div>
+            <div class="multibeneficios-right">
+                <p class="description font-text-m cor-b3">
+                    Nossos cartões multibenefícios oferecem mais autonomia aos colaboradores, reunindo alimentação,
+                    transporte, saúde e cultura em uma única plataforma. A empresa ganha praticidade no controle, e o
+                    time, mais liberdade para escolher onde e como utilizar seus benefícios.
+                </p>
+                <div class="btn_geralbranco">
+                    <a href="#" class="btn-customgeral_white">
+                        <span class="icon-circlegeralgold"><i class="arrow-icongeral">➜</i></span>
+                        <span class="text font-title-s cor-c2">TODOS CARTÕES</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARDS MULTIBENEFÍCIOS -->
+        <div class="carousel-container">
+            <div class="card-carousel" id="card-carousel">
+                <a href="#" class="card-item font-title-l cor-b0"
+                    style="background-image: url('./img/home/cartoes/pexels-gustavo-fring-3985062.jpg');">
+                    <div class="card-overlay"></div>
+                    <span class="card-title">Vale Alimentação</span>
+                </a>
+
+                <a href="#" class="card-item font-title-l cor-b0"
+                    style="background-image: url('./img/home/cartoes/valeref01.jpg');">
+                    <div class="card-overlay"></div>
+                    <span class="card-title">Vale Refeição</span>
+                </a>
+
+                <a href="#" class="card-item font-title-l cor-b0"
+                    style="background-image: url('./img/home/cartoes/a-confident-female-pharmacist-standing-at-the-cent.png');">
+                    <div class="card-overlay"></div>
+                    <span class="card-title">Cartão Farmácia</span>
+                </a>
+
+                <a href="#" class="card-item font-title-l cor-b0"
+                    style="background-image: url('./img/home/cartoes/a-close-up-of-a-fuel-pump-nozzle-properly-inserted.jpg');">
+                    <div class="card-overlay"></div>
+                    <span class="card-title">Frota e Combustível</span>
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- CLIENTES -->
+    <section class="clientes-section">
+        <div class="decoracao-linha">
+            <div class="linha-horizontal-amarela"></div>
+        </div>
+        <h2 class="clientes-title cor-b0 font-title-l">CLIENTES</h2>
+        <p class="clientes-subtitle font-text-m cor-b3">Atendimento de qualidade que gera conexão real.</p>
+
+        <div class="clientes-carousel-wrapper">
+            <div class="clientes-carousel" id="clientes-carousel">
+                <img src="./img/logosClientes/Nbonn.png" alt="Moon" />
+                <img src="./img/logosClientes/heluse.png" alt="Heluse" />
+                <img src="./img/logosClientes/mcdonald.png" alt="McDonalds" />
+                <img src="./img/logosClientes/steviasoul.png" alt="Stevisoul" />
+                <img src="./img/logosClientes/eletran.png" alt="Eletran" />
+                <img src="./img/logosClientes/maxbelt.png" alt="Maxbelt" />
+                <!-- duplicado para efeito contínuo -->
+                <img src="./img/logosClientes/cineflix.png" alt="cineflix" />
+                <img src="./img/logosClientes/contersolo.png" alt="conter" />
+                <img src="./img/logosClientes/kfc.png" alt="McDonalds" />
+                <img src="./img/logosClientes/ossuci.png" alt="Stevisoul" />
+                <img src="./img/logosClientes/prolife.png" alt="Eletran" />
+                <img src="./img/logosClientes/somavi.png" alt="Maxbelt" />
+            </div>
+        </div>
+    </section>
+
+    <!--BANNERS-->
+    <section class="banner-section">
+        <div class="banner-slide active">
+            <img src="./img/banners/banner01.png" alt="Banner 1" />
+        </div>
+        <div class="banner-slide">
+            <img src="./img/banners/banner02.jpg" alt="Banner 2" />
+        </div>
+        <div class="banner-slide">
+            <img src="./img/banners/banner03.jpg" alt="Banner 3" />
+        </div>
+    </section>
+
+    <!--COMBOS-->
+    <section class="combo-section">
+        <h2 class="combo-title font-title-l cor-b0">CONHEÇA NOSSO COMBO</h2>
+        <div class="combo-cards">
+
+            <a href="./beneficios/farmacia.html" class="combo-card"
+                style="background-image: url('./img/combo/farmacia/01.png');">
+                <div class="combo-content">
+                    <h3>DESCONTO EM FARMÁCIA (DROGA RAIA E DROGASIL)</h3>
+                    <p class="cor-b3 font-text-s">Economize na Saúde: Até 45% de desconto em medicamentos!</p>
+                </div>
+            </a>
+
+            <a href="./beneficios/totalpass.html" class="combo-card"
+                style="background-image: url('./img/combo/totalpass/image 61.jpg');">
+                <div class="combo-content">
+                    <h3>TOTALPASS</h3>
+                    <p class="cor-b3 font-text-s">Mais Saúde e Bem-Estar: Acesso a academias com descontos exclusivos!
+                    </p>
+                </div>
+            </a>
+
+            <a href="./beneficios/telemedicina.html" class="combo-card"
+                style="background-image: url('./img/combo/telemedicina/a-man-sitting-at-a-desk-at-home--engaged-in-an-onl.jpg');">
+                <div class="combo-content">
+                    <h3>TELEMEDICINA</h3>
+                    <p class="cor-b3 font-text-s">Cuide da Sua Saúde sem Sair de Casa: Consultas online com médicos
+                        especialistas!</p>
+                </div>
+            </a>
+
+            <a href="./beneficios/gympass.html" class="combo-card"
+                style="background-image: url('./img/combo/gympass/74dfe4f0882c5a1cdd2cd687c7dc0431.jpg');">
+                <div class="combo-content">
+                    <h3>GYMPASS</h3>
+                    <p class="cor-b3 font-text-s">Mais Qualidade de Vida: Acesso ao Gympass com benefícios exclusivos!
+                    </p>
+                </div>
+            </a>
+
+        </div>
+
+        <div class="btn-wrapper">
+            <a href="./combogeral.html" class="btn-customgeral_gold">
+                <span class="icon-circlegeralwhite">
+                    <span class="arrow-icongeral">➜</span>
+                </span>
+                <span class="text font-title-s cor-b0">Saiba Mais</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- PARCEIROS -->
+    <section class="parceiros-section">
+        <div class="decoracao-linha">
+            <div class="linha-horizontal-amarela"></div>
+        </div>
+        <h2 class="parceiros-title cor-b0 font-title-l">PARCEIROS</h2>
+        <p class="clientes-subtitle font-text-m cor-b3">Colaboração estratégica com foco em performance</p>
+
+        <div class="parceiros-carousel-wrapper">
+            <div class="parceiros-carousel" id="parceiros-carousel">
+                <img src="./img/parceiros/logosParceiros/amigao.png" alt="Amigão" />
+                <img src="./img/parceiros/logosParceiros/angeloni.png" alt="Angeloni" />
+                <img src="./img/parceiros/logosParceiros/assai.png" alt="Assaí" />
+                <img src="./img/parceiros/logosParceiros/atacadao.png" alt="Atacadão" />
+                <img src="./img/parceiros/logosParceiros/bomdia.png" alt="Bom Dia" />
+                <img src="./img/parceiros/logosParceiros/burgerking.png" alt="Burger King" />
+                <img src="./img/parceiros/logosParceiros/carrefour.png" alt="Carrefour" />
+                <img src="./img/parceiros/logosParceiros/condor.png" alt="Condor" />
+                <img src="./img/parceiros/logosParceiros/drogasil.png" alt="Drogasil" />
+                <img src="./img/parceiros/logosParceiros/festval.png" alt="Festval" />
+                <img src="./img/parceiros/logosParceiros/mcdonald.png" alt="McDonald's" />
+                <img src="./img/parceiros/logosParceiros/mufato.png" alt="Mufato" />
+                <img src="./img/parceiros/logosParceiros/paodeacucar.png" alt="Pão de Açúcar" />
+                <img src="./img/parceiros/logosParceiros/raia.png" alt="Raia" />
+                <img src="./img/parceiros/logosParceiros/supergolf.png" alt="Super Golf" />
+            </div>
+        </div>
+    </section>
+
+    <!--SOBRE NÓS-->
+    <section class="sobre-nos-section">
+        <div class="linha-decorativa"></div>
+
+        <h2 class="titulo-sobre cor-b0 font-title-l">SOBRE NÓS</h2>
+        <p class="descricao-sobre font-text-m cor-b3">
+            Somos a NEX7, uma empresa que une inovação e humanização para transformar a gestão de benefícios.
+            Atuamos com soluções acessíveis e atendimento próximo, buscando impactar positivamente empresas e
+            colaboradores.
+        </p>
+
+        <div class="grid-sobre">
+            <!-- Coluna Esquerda -->
+            <div class="sobre-coluna-esquerda">
+                <div class="bloco-informativo">
+                    <div class="icone-box">
+                        <span class="material-symbols-outlined">lightbulb</span>
+                    </div>
+                    <div class="texto-box">
+                        <strong class="cor-c2 font-title-m">Inovação com Propósito:</strong>
+                        <p class="cor-b2 font-text-s">Soluções modernas que facilitam a gestão de benefícios.</p>
+                    </div>
+                </div>
+
+                <div class="bloco-informativo">
+                    <div class="icone-box">
+                        <span class="material-symbols-outlined">support_agent</span>
+                    </div>
+                    <div class="texto-box">
+                        <strong class="cor-c2 font-title-m">Atendimento Humanizado:</strong>
+                        <p class="cor-b2 font-text-s">Suporte próximo, acessível e empático.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Imagem Central -->
+            <div class="imagem-central">
+                <img src="./img/sobrenos/pexels-kindelmedia-6775105.jpg" alt="Equipe unida" />
+            </div>
+
+            <!-- Coluna Direita -->
+            <div class="sobre-coluna-direita">
+                <div class="bloco-informativo">
+                    <div class="icone-box">
+                        <span class="material-symbols-outlined">psychology</span>
+                    </div>
+                    <div class="texto-box">
+                        <strong class="cor-c2 font-title-m">Soluções Inteligentes:</strong>
+                        <p class="cor-b2 font-text-s">Benefícios eficientes e sem burocracia.</p>
+                    </div>
+                </div>
+
+                <div class="bloco-informativo">
+                    <div class="icone-box">
+                        <span class="material-symbols-outlined">volunteer_activism</span>
+                    </div>
+                    <div class="texto-box">
+                        <strong class="cor-c2 font-title-m">Impacto Positivo:</strong>
+                        <p class="cor-b2 font-text-s">Valorizamos pessoas e otimizamos resultados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botão -->
+        <div class="btn_geralbranco">
+            <a href="#" class="btn-customgeral_white">
+                <span class="icon-circlegeralgold"><i class="arrow-icongeral">➜</i></span>
+                <span class="text font-title-s cor-c2">TODOS CARTÕES</span>
+            </a>
+        </div>
+    </section>
+
+    <!--FORMULARIO DE CONTATO TIPO1-->
+    <section class="contato-section">
+        <h2 class="contato-titulo cor-c2 font-title-xl">Ficou com dúvidas ou quer saber mais?</h2>
+        <p class="contato-subtitulo font-text-l cor-b3">Fala com a gente, vai ser um prazer te atender!</p>
+
+        <div class="form-container">
+            <form class="formulario-contato">
+                <h3 class="form-titulo font-title-m cor-b1">Preencha seus dados e vamos conversar!</h3>
+
+                <input type="text" name="nome" placeholder="Seu nome" required />
+                <input type="email" name="email" placeholder="E-mail" required />
+                <input type="tel" name="telefone" placeholder="Celular" required />
+                <textarea name="mensagem" placeholder="Como podemos te ajudar?" rows="4" required></textarea>
+
+                <div class="form_enviar">
+                    <button type="submit" class="btn-enviar font-title-s cor-c2">ENVIAR</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- GOOGLE MAPS-->
+    <section class="maps-bg">
+
+        <div class="maps_container">
+            <iframe
+                src="https://www.google.com/maps?q=Av.+Duque+de+Caxias,+882,+Sala+501-Torre+01,+Ed.+New+Tower+Plaza,+Zona+07,+Maringá+-+PR,+87020-025&output=embed"
+                loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="./img/logonex7/logopadraobr.svg" alt="Logo Nex7" />
+                <p class="font-text-s cor-b0">Soluções inovadoras em benefícios para empresas e colaboradores.</p>
+
+                <div class="social-icons">
+                    <!-- Facebook -->
+                    <!--
+                        <a href="https://www.facebook.com/seuPerfil" target="_blank" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M22 12C22 6.48 17.52 2 12 2C6.48 2 2 6.48 2 12C2 16.84 5.44 20.87 10 21.8V15H8V12H10V9.5C10 7.57 11.57 6 13.5 6H16V9H14C13.45 9 13 9.45 13 10V12H16V15H13V21.95C18.05 21.45 22 17.19 22 12Z"
+                                fill="#775B00" />
+                        </svg>
+                    </a>
+-->
+                    <!-- Instagram -->
+                    <!---
+                    <a href="https://www.instagram.com/seuPerfil" target="_blank" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M7.8 2H16.2C19.4 2 22 4.6 22 7.8V16.2C22 17.7383 21.3889 19.2135 20.3012 20.3012C19.2135 21.3889 17.7383 22 16.2 22H7.8C4.6 22 2 19.4 2 16.2V7.8C2 6.26174 2.61107 4.78649 3.69878 3.69878C4.78649 2.61107 6.26174 2 7.8 2ZM7.6 4C6.64522 4 5.72955 4.37928 5.05442 5.05442C4.37928 5.72955 4 6.64522 4 7.6V16.4C4 18.39 5.61 20 7.6 20H16.4C17.3548 20 18.2705 19.6207 18.9456 18.9456C19.6207 18.2705 20 17.3548 20 16.4V7.6C20 5.61 18.39 4 16.4 4H7.6ZM17.25 5.5C17.5815 5.5 17.8995 5.6317 18.1339 5.86612C18.3683 6.10054 18.5 6.41848 18.5 6.75C18.5 7.08152 18.3683 7.39946 18.1339 7.63388C17.8995 7.8683 17.5815 8 17.25 8C16.9185 8 16.6005 7.8683 16.3661 7.63388C16.1317 7.39946 16 7.08152 16 6.75C16 6.41848 16.1317 6.10054 16.3661 5.86612C16.6005 5.6317 16.9185 5.5 17.25 5.5ZM12 7C13.3261 7 14.5979 7.52678 15.5355 8.46447C16.4732 9.40215 17 10.6739 17 12C17 13.3261 16.4732 14.5979 15.5355 15.5355C14.5979 16.4732 13.3261 17 12 17C10.6739 17 9.40215 16.4732 8.46447 15.5355C7.52678 14.5979 7 13.3261 7 12C7 10.6739 7.52678 9.40215 8.46447 8.46447C9.40215 7.52678 10.6739 7 12 7ZM12 9C11.2044 9 10.4413 9.31607 9.87868 9.87868C9.31607 10.4413 9 11.2044 9 12C9 12.7956 9.31607 13.5587 9.87868 14.1213C10.4413 14.6839 11.2044 15 12 15C12.7956 15 13.5587 14.6839 14.1213 14.1213C14.6839 13.5587 15 12.7956 15 12C15 11.2044 14.6839 10.4413 14.1213 9.87868C13.5587 9.31607 12.7956 9 12 9Z"
+                                fill="#775B00" />
+                        </svg>
+                    </a>
+--->
+
+                    <!-- LinkedIn -->
+                    <!---
+                    <a href="https://www.linkedin.com/in/seuPerfil" target="_blank" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M19 3C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19ZM18.5 18.5V13.2C18.5 12.3354 18.1565 11.5062 17.5452 10.8948C16.9338 10.2835 16.1046 9.94 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17C14.6813 12.17 15.0374 12.3175 15.2999 12.5801C15.5625 12.8426 15.71 13.1987 15.71 13.57V18.5H18.5ZM6.88 8.56C7.32556 8.56 7.75288 8.383 8.06794 8.06794C8.383 7.75288 8.56 7.32556 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19C6.43178 5.19 6.00193 5.36805 5.68499 5.68499C5.36805 6.00193 5.19 6.43178 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56ZM8.27 18.5V10.13H5.5V18.5H8.27Z"
+                                fill="#775B00" />
+                        </svg>
+                    </a>
+---->
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3>LINKS RÁPIDOS</h3>
+                <ul>
+                    <li><a href="#" class="font-text-s  cor-b0">Sobre Nós</a></li>
+                    <li><a href="#" class="font-text-s  cor-b0">Soluções</a></li>
+                    <li><a href=".#" class="font-text-s  cor-b0">Solicitar Proposta</a></li>
+                    <li><a href="index.html#parceiros_section" class="font-text-s  cor-b0">Parceiros</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>CONTATO</h3>
+                <p class="font-text-s  cor-b0">Telefone: (44) 3301-8160</p>
+                <p class="font-text-s  cor-b0">E-Mail: vegasmaringa@gruponex7.com.br</p>
+                <p class="font-text-s  cor-b0">Endereço:<br>
+                    Av. Duque De Caxias, 882, Sala 501-Torre 01,<br>
+                    Ed. New Tower Plaza, Zona 07 - Maringá-PR,<br>
+                    CEP: 87020-025
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="font-text-s  cor-b0">© 2025 NEX7. Todos Os Direitos Reservados.</p>
+            <!--
+            <div class="footer-policies">
+                <a href="#" class="font-text-s  cor-b0">Termos de Serviço</a>
+                <a href="#" class="font-text-s  cor-b0">Política de Privacidade</a>
+                <a href="#" class="font-text-s  cor-b0">Cookies</a>
+            </div>            
+-->
+        </div>
+    </footer>
+
+    <script type="module" src="./script/script.js"></script>
+</body>

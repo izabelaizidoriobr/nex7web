@@ -1,0 +1,192 @@
+.hero {
+    position: relative;
+    height: 620px;
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+}
+
+.hero-content.container {
+    position: relative;
+    z-index: 2;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin: 0;
+    max-width: none;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-content p {
+    margin-top: 24px;
+    max-width: 640px;
+}
+
+/* Botões Container */
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 44px;
+}
+
+/* Botão base */
+.btn-custom {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding-right: 24px;
+    height: 44px;
+}
+
+/* Ícone circular colado à esquerda */
+.btn-custom .icon-circle {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 4px;
+    margin-right: 12px;
+    transition: transform 0.3s ease;
+}
+
+/* Tamanhos da seta */
+.arrow-icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* Dourado com círculo branco */
+.btn-custom.gold {
+    background-color: #c9a038;
+    color: white;
+}
+
+.btn-custom.gold .icon-circle.white {
+    background-color: white;
+    color: #c9a038;
+}
+
+/* Branco com círculo dourado */
+.btn-custom.white {
+    background-color: white;
+    color: #c9a038;
+}
+
+.btn-custom.white .icon-circle.gold {
+    background-color: #c9a038;
+    color: white;
+}
+
+/* Texto */
+.btn-custom .text {
+    white-space: nowrap;
+}
+
+/* Hover animação leve da seta */
+.btn-custom:hover .icon-circle {
+    transform: translateX(4px);
+}
+
+.btn-custom.gold:hover {
+    background-color: #b18b30;
+}
+
+.btn-custom.white:hover {
+    background-color: #f5f5f5;
+}
+
+
+/* Animação de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade para tablets */
+@media (max-width: 1024px) {
+    .hero-content.container {
+        padding-left: 44px;
+        padding-right: 44px;
+    }
+
+    .hero-bg {
+        margin-top: 50px;
+    }
+
+    .hero-content h1 {
+        font-size: 44px;
+    }
+
+    /* Ajuste geral no botão */
+    .btn-custom {
+        height: 38px;
+        /* antes era 44px */
+        padding-right: 18px;
+        /* antes era 24px */
+        font-size: 0.875rem;
+        /* reduz um pouco o tamanho da fonte */
+    }
+
+    /* Ícone circular menor */
+    .btn-custom .icon-circle {
+        width: 30px;
+        /* antes era 36px */
+        height: 30px;
+        min-width: 30px;
+        margin-right: 10px;
+        /* levemente menor */
+    }
+
+    /* Ícone de seta menor */
+    .arrow-icon {
+        width: 14px;
+        /* antes era 16px */
+        height: 14px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .hero-content p {
+        margin-top: 12px;
+    }
+
+    .hero-buttons {
+        margin-top: 32px;
+        gap: 12px;
+    }
+}

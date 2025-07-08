@@ -1,0 +1,139 @@
+.combo-section {
+    padding-top: 120px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.combo-section h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.combo-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 64px;
+}
+
+.combo-card {
+    width: 320px;
+    height: 420px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    text-decoration: none;
+}
+
+/* Gradiente escuro no fundo */
+.combo-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(24, 24, 24, 0.00) 0%, #000 100%);
+    z-index: 0;
+}
+
+/* Hover amarelo translúcido */
+.combo-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 215, 0, 0);
+    /* amarelo transparente */
+    transition: background 0.3s ease;
+    z-index: 1;
+}
+
+.combo-card:hover::after {
+    background: rgba(150, 130, 18, 0.25);
+    /* amarelo translúcido */
+}
+
+.combo-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    text-align: left;
+}
+
+.combo-content h3 {
+    color: #f6f6f6;
+    font-family: Manrope;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.combo-content p {
+    margin-top: 12px;
+}
+
+/* BOTÃO DOURADO COM ÍCONE BRANCO */
+.btn-wrapper {
+    margin-top: 64px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-customgeral_gold {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding-right: 24px;
+    height: 44px;
+    background-color: #C49E32;
+    padding-left: 4px;
+}
+
+.icon-circlegeralwhite {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 50%;
+    background-color: #f6f6f6;
+    color: #C49E32;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    transition: transform 0.3s ease;
+    font-size: 16px;
+}
+
+.arrow-icongeral {
+    font-style: normal;
+    line-height: 1;
+    display: inline-block;
+    font-weight: bold;
+    transform: translateY(-1px);
+}
+
+.btn-customgeral_gold .text {
+    white-space: nowrap;
+}
+
+.btn-customgeral_gold:hover .icon-circlegeralwhite {
+    transform: translateX(4px);
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+    .combo-section {
+        padding-top: 80px;
+        padding-left: 44px;
+        padding-right: 44px;
+    }
+
+}

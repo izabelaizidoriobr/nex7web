@@ -1,0 +1,96 @@
+/* Extra pequeno */
+.font-title-xs {
+    font: 600 0.75rem/1.4 "Manrope", sans-serif;
+}
+
+.font-text-xs {
+    font: 400 0.75rem/1.4 "Montserrat", sans-serif;
+}
+
+/* Pequeno */
+.font-title-s {
+    font: 600 0.875rem/1.4 "Manrope", sans-serif;
+}
+
+.font-text-s {
+    font: 500 0.875rem/1.5 "Montserrat", sans-serif;
+}
+
+/* Médio */
+.font-title-m {
+    font: 600 1.125rem/1.35 "Manrope", sans-serif;
+}
+
+.font-text-m {
+    font: 400 1rem/1.5 "Montserrat", sans-serif;
+}
+
+/* Grande */
+.font-title-l {
+    font: 900 1.5rem/1.4 "Manrope", sans-serif;
+}
+
+.font-text-l {
+    font: 400 1.25rem/1.5 "Montserrat", sans-serif;
+}
+
+/* Extra grande */
+.font-title-xl {
+    font: 700 2.2rem/1.2 "Manrope", sans-serif;
+}
+
+.font-text-xl {
+    font: 400 1.5rem/1.5 "Montserrat", sans-serif;
+}
+
+/* Extra-extra grande - para hero/banner */
+.font-title-xxl {
+    font: 800 3.5rem/1.15 "Manrope", sans-serif;
+    letter-spacing: -0.02em;
+}
+
+/* Responsivo */
+@media (max-width: 1200px) {
+    .font-title-xxl {
+        font-size: 2.5rem;
+    }
+
+    .font-title-xl {
+        font-size: 1.75rem;
+    }
+
+    .font-text-xl {
+        font-size: 1.25rem;
+    }
+
+    .font-title-l {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .font-title-xxl {
+        font-size: 2rem;
+    }
+
+    .font-title-xl {
+        font-size: 1.5rem;
+    }
+
+    .font-title-l {
+        font-size: 1.125rem;
+    }
+
+    .font-text-l,
+    .font-text-xl {
+        font-size: 1rem;
+    }
+
+    .font-title-m {
+        font-size: 1rem;
+    }
+
+    .font-text-m {
+        font-size: 0.875rem;
+    }
+}
