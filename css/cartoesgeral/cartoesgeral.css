@@ -1,0 +1,107 @@
+.filter-cards {
+    padding-top: 120px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.btn-filters {
+    display: flex;
+    gap:24px ;
+}
+
+.btn-f {
+border: none;
+display: inline-flex;
+padding: 12px 32px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 30px;
+background: #F6F6F6;
+cursor: pointer;
+color: #181818;
+
+text-align: center;
+font-family: Manrope;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-transform: uppercase;
+}
+
+.btn-f:active {
+    background: #C49E32;
+    color: #FFFFFF;
+}
+
+.cards-benefits {
+    margin-top: 64px;
+}
+
+.card-b {
+width: 360.87px;
+height: 373.571px;
+flex-shrink: 0;
+border-radius: 22.414px;
+border: 1.494px solid #DCBB4F;
+background: #F6F6F6;
+padding: 42px 47px;
+}
+
+
+.card-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card-b-title {
+ color: #000;
+
+font-family: Manrope;
+font-size: 23.909px;
+font-style: normal;
+font-weight: 700;
+line-height: 109%; /* 26.06px */
+text-transform: capitalize;
+}
+
+.card-button {
+    border: none;
+display: inline-flex;
+padding: 8.966px 23.909px;
+justify-content: center;
+align-items: center;
+gap: 7.471px;
+border-radius: 22.414px;
+background: #C49E32;
+color: #FFF;
+
+text-align: center;
+font-family: Manrope;
+font-size: 11.954px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-transform: uppercase;
+ 
+}
+
+.card-button:hover {
+  background-color: #b18d3e;
+}
+
+.info-card-b {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+.list-cards {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 120px;
+}
+
