@@ -25,6 +25,5 @@
 
 
 /* CARTOES GERAL  */
-
-@import url("./cartoesgeral/cartoesgeral.css");
+@import "./cartoesgeral/cartoesgeral.css";
 @import "./cartoesgeral/cartaopagdesign.css";
