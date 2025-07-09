@@ -1,0 +1,248 @@
+.desc-ct {
+    padding-top: 120px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.desc-ct-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 48px;
+}
+
+.desc-cont-ct {
+    flex: 1 1 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.desc-ct-title h1 {
+    margin-bottom: 16px;
+}
+
+.desc-ct-conteudo p {
+    text-align: justify;
+    margin-bottom: 22px;
+    line-height: 1.6;
+    max-width: 100%;
+}
+
+.desc-ct-img {
+    flex: 1 1 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desc-ct-img img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* BENEFICIOS */
+
+.beneficios-vegas {
+    padding-top: 120px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.beneficios-vegas h2 {
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+}
+
+.beneficios-vegas-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.beneficios-vegas-coluna {
+    flex: 1 1 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.beneficio-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.linha-lateral {
+    width: 4px;
+    height: 100%;
+    background-color: #c49e32;
+    border-radius: 2px;
+}
+
+.beneficio-conteudo h3 {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #c49e32;
+}
+
+.beneficio-conteudo p {
+    color: #d1d1d1;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* CTA CONTATO */
+
+.cta-contato {
+    padding-top: 120px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.cta-cards-container {
+    display: flex;
+    justify-content: center;
+}
+
+.cta-card-imagem {
+    position: relative;
+    width: 1000px;
+    height: 420px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.cta-card-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 30px;
+}
+
+/* TEXTO SOBRE A IMAGEM */
+.cta-overlay-texto {
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    transform: translateY(-50%);
+    z-index: 2;
+    color: white;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* MAIS CARTÕES */
+.cartoes-ops {
+    padding-top: 120px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 1024px) {
+
+    .desc-ct,
+    .beneficios-vegas,
+    .cta-contato,
+    .cartoes-ops {
+        padding-left: 44px;
+        padding-right: 44px;
+        padding-top: 80px;
+    }
+
+    .desc-ct-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .desc-cont-ct {
+        flex: 1 1 100%;
+        align-items: center;
+    }
+
+    .desc-ct-img {
+        flex: 1 1 100%;
+    }
+
+    .desc-ct-img img {
+        max-width: 100%;
+    }
+
+    .beneficios-vegas-grid {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .beneficios-vegas-coluna {
+        flex: 1 1 100%;
+    }
+
+    .cta-card-imagem {
+        width: 100%;
+        height: auto;
+        min-height: 360px;
+    }
+
+    .cta-overlay-texto {
+        left: 32px;
+        right: 32px;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .desc-ct,
+    .beneficios-vegas,
+    .cta-contato,
+    .cartoes-ops {
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 60px;
+    }
+
+    .desc-ct-title h1 {
+        font-size: 24px;
+    }
+
+    .beneficios-vegas h2 {
+        font-size: 18px;
+        margin-bottom: 32px;
+    }
+
+    .beneficio-conteudo h3 {
+        font-size: 16px;
+    }
+
+    .beneficio-conteudo p {
+        font-size: 13px;
+    }
+
+    .cta-card-imagem {
+        min-height: 300px;
+        border-radius: 20px;
+    }
+
+    .cta-card-imagem img {
+        border-radius: 20px;
+    }
+
+    .cta-overlay-texto {
+        top: 50%;
+        left: 16px;
+        right: 16px;
+        max-width: 100%;
+        font-size: 14px;
+    }
+}
