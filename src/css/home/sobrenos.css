@@ -1,7 +1,5 @@
 .sobre-nos-section {
     padding-top: 120px;
-    padding-left: 80px;
-    padding-right: 80px;
     justify-items: center;
 }
 
@@ -26,7 +24,8 @@
 }
 
 .grid-sobre {
-    margin: 64px 0;
+    max-width: 1400px;
+    margin-top: 64px;
     display: grid;
     grid-template-columns: 1fr 1.2fr 1fr;
     gap: 20px;
