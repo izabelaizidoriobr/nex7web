@@ -6,28 +6,28 @@
 
 .btn-filters {
     display: flex;
-    gap:24px ;
+    gap: 24px;
 }
 
 .btn-f {
-border: none;
-display: inline-flex;
-padding: 12px 32px;
-justify-content: center;
-align-items: center;
-gap: 10px;
-border-radius: 30px;
-background: #F6F6F6;
-cursor: pointer;
-color: #181818;
+    border: none;
+    display: inline-flex;
+    padding: 12px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 30px;
+    background: #F6F6F6;
+    cursor: pointer;
+    color: #181818;
 
-text-align: center;
-font-family: Manrope;
-font-size: 16px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-text-transform: uppercase;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
 }
 
 .btn-f:active {
@@ -40,63 +40,65 @@ text-transform: uppercase;
 }
 
 .card-b {
-width: 360.87px;
-height: 373.571px;
-flex-shrink: 0;
-border-radius: 22.414px;
-border: 1.494px solid #DCBB4F;
-background: #F6F6F6;
-padding: 42px 47px;
+    width: 360.87px;
+    height: 373.571px;
+    flex-shrink: 0;
+    border-radius: 22.414px;
+    border: 1.494px solid #DCBB4F;
+    background: #F6F6F6;
+    padding: 42px 47px;
+    text-align: center;
 }
 
 
 .card-image {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 15px;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
 .card-b-title {
- color: #000;
+    color: #000;
 
-font-family: Manrope;
-font-size: 23.909px;
-font-style: normal;
-font-weight: 700;
-line-height: 109%; /* 26.06px */
-text-transform: capitalize;
+    font-family: Manrope;
+    font-size: 23.909px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 109%;
+    /* 26.06px */
+    text-transform: capitalize;
 }
 
 .card-button {
     border: none;
-display: inline-flex;
-padding: 8.966px 23.909px;
-justify-content: center;
-align-items: center;
-gap: 7.471px;
-border-radius: 22.414px;
-background: #C49E32;
-color: #FFF;
+    display: inline-flex;
+    padding: 8.966px 23.909px;
+    justify-content: center;
+    align-items: center;
+    gap: 7.471px;
+    border-radius: 22.414px;
+    background: #C49E32;
+    color: #FFF;
 
-text-align: center;
-font-family: Manrope;
-font-size: 11.954px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-text-transform: uppercase;
-cursor: pointer;
- 
+    text-align: center;
+    font-family: Manrope;
+    font-size: 11.954px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    cursor: pointer;
+
 }
 
 .btn-f.ativo {
-  background-color: #c7a44c;
-  color: white;
-  font-weight: bold;
+    background-color: #c7a44c;
+    color: white;
+    font-weight: bold;
 }
 
 .card-button:hover {
-  background-color: #b18d3e;
+    background-color: #b18d3e;
 }
 
 .info-card-b {
@@ -109,9 +111,9 @@ cursor: pointer;
 .list-cards {
     display: flex;
     gap: 14px;
-    margin-top:64px ;
+    margin-top: 64px;
     margin-bottom: 120px;
-   
+
 }
 
 .container-cards {
@@ -120,11 +122,80 @@ cursor: pointer;
 
 .title-cards-benefits {
     color: #C49E32;
-font-family: Manrope;
-font-size: 36px;
-font-style: normal;
-font-weight: 700;
-line-height: 109%; /* 39.24px */
-text-transform: uppercase;
+    font-family: Manrope;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 109%;
+    /* 39.24px */
+    text-transform: uppercase;
 }
 
+/* RESPONSIVO - TABLET */
+@media (max-width: 991px) {
+    .filter-cards {
+        padding-top: 80px;
+        padding-left: 44px;
+        padding-right: 44px;
+    }
+
+    .btn-filters {
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+    }
+
+    .list-cards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card-b {
+        width: 300px;
+        height: auto;
+        padding: 32px 32px;
+    }
+
+    .card-b-title {
+        font-size: 20px;
+    }
+
+    .card-button {
+        font-size: 11px;
+        padding: 8px 18px;
+    }
+
+    .title-cards-benefits {
+        font-size: 28px;
+        text-align: center;
+    }
+}
+
+/* RESPONSIVO - CELULAR */
+@media (max-width: 576px) {
+    .filter-cards {
+        padding-top: 80px;
+        padding-left: 44px;
+        padding-right: 44px;
+    }
+
+    .btn-f {
+        font-size: 12px;
+        padding: 10px 20px;
+    }
+
+    .list-cards {
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+    }
+
+    .card-b {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .title-cards-benefits {
+        font-size: 24px;
+    }
+}
