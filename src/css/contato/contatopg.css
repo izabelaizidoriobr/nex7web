@@ -1,5 +1,6 @@
 .contato-forms {
     padding: 200px 120px;
+    
 }
 
 .contato_intro {
@@ -59,11 +60,11 @@ form {
 
 input,
 textarea {
-    background-color: #fff;
+     background-color: #dddddd;
     color: #000;
     border: none;
-    padding: 10px;
-    border-radius: 4px;
+     padding: 14px 18px;
+        border-radius: 30px;
     font-size: 14px;
     box-sizing: border-box;
 }
@@ -88,7 +89,7 @@ textarea {
     font-size: 14px;
     border-radius: 4px;
     cursor: pointer;
-    width: 800px;
+    width: 200px;
 }
 
 .btn-contato a {
@@ -104,13 +105,19 @@ textarea {
 .info-contato {
     margin-top: 40px;
     font-size: 14px;
+    
 }
 
 .info-contato p {
     display: flex;
     align-items: center;
-    gap: 10px;
+    
     margin: 10px 0;
+    color: #181818;
+}
+
+textarea {
+    resize: none;
 }
 
 .dot {
