@@ -102,6 +102,21 @@ text-transform: uppercase;
 .list-cards {
     display: flex;
     gap: 14px;
+    margin-top:64px ;
+   
+}
+
+.container-cards {
     margin-bottom: 120px;
+}
+
+.title-cards-benefits {
+    color: #C49E32;
+font-family: Manrope;
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: 109%; /* 39.24px */
+text-transform: uppercase;
 }
 
