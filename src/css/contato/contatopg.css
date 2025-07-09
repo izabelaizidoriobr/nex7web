@@ -87,7 +87,7 @@ textarea {
     padding: 12px;
     font-weight: bold;
     font-size: 14px;
-    border-radius: 4px;
+    border-radius: 30px;
     cursor: pointer;
     width: 200px;
 }
@@ -98,7 +98,7 @@ textarea {
 
 .btn-contato button:hover {
     background-color: #DCBB4F;
-    border-radius: 4px;
+  border-radius: 30px;
 }
 
 
