@@ -9,6 +9,9 @@
 @import "./global/global.css";
 @import "./global/footer.css";
 
+/* CONTATO PG */
+@import "./contato/contatopg.css";
+
 /*HOME*/
 @import "./home/hero.css";
 @import "./home/mult.css";
