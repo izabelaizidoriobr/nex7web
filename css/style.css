@@ -22,3 +22,8 @@
 /* COMBO GERAL */
 @import"./combo/combogeral.css";
 @import"./combo/combodesign.css";
+
+
+/* CARTOES GERAL  */
+
+@import url("./cartoesgeral/cartoesgeral.css");
