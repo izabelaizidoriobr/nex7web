@@ -1,8 +1,9 @@
 .footer {
     background-color: #181818;
     color: #f5f5f5;
-    padding: 40px 20px 20px;
-    padding-inline: 118px;
+    padding-top: 50px;
+    padding-left: 80px;
+    padding-right: 80px;
     border-top: 3px solid #cba94d;
 }
 
@@ -13,10 +14,6 @@
     gap: 40px;
     padding: 20px 0;
     margin: auto;
-}
-
-.footer-logo {
-    padding-left: 0px;
 }
 
 .footer-logo img {
@@ -112,6 +109,11 @@
 }
 
 @media (max-width: 840px) {
+    .footer {
+        padding-left: 44px;
+        padding-right: 44px;
+    }
+
     .social-icons {
         display: flex;
         gap: 16px;
