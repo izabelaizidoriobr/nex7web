@@ -123,8 +123,6 @@
         top: auto;
         bottom: 30px;
         transform: none;
-        background-color: rgba(0, 0, 0, 0.5);
-        /* melhor leitura */
         border-radius: 12px;
     }
 
