@@ -1,53 +1,145 @@
 .banner-section {
-    position: relative;
     width: 100%;
-    max-width: 100%;
-    height: 620px;
-    overflow: hidden;
-}
-
-.banner-slide {
     padding-top: 120px;
     padding-left: 80px;
     padding-right: 80px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    z-index: 0;
-    transition: opacity 1s ease-in-out;
+    position: relative;
+    overflow: hidden;
 }
 
-.banner-slide.active {
-    opacity: 1;
-    z-index: 1;
-}
-
-.banner-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* garante proporção sem distorcer */
+.banner-link {
     display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.banner-container {
+    position: relative;
+}
+
+.banner-container img {
+    width: 100%;
+    height: 720px;
+    object-fit: cover;
     border-radius: 30px;
 }
 
+.banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.banner-texto {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+    max-width: 620px;
+    z-index: 2;
+    padding: 20px;
+}
+
+.banner-texto h2 {
+    color: #f6f6f6;
+    font-size: 3rem;
+    margin-bottom: 12px;
+}
+
+.banner-texto p {
+    color: #f6f6f6;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.banner-texto .cta {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #f6f6f6;
+    text-decoration: underline;
+}
+
+/* ========== RESPONSIVIDADE ========== */
 @media (max-width: 1024px) {
-    .banner-slide {
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-top: 80px;
+    .banner-texto h2 {
+        font-size: 2.4rem;
+    }
+
+    .banner-texto p {
+        font-size: 1.1rem;
+    }
+
+    .banner-texto .cta {
+        font-size: 1.3rem;
+    }
+
+    .banner-container img {
+        height: 600px;
+    }
+
+    .banner-texto {
+        left: 30px;
     }
 }
 
 @media (max-width: 768px) {
     .banner-section {
-        position: relative;
-        width: 100%;
-        max-width: 100%;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .banner-texto {
+        left: 20px;
+        max-width: 90%;
+    }
+
+    .banner-texto h2 {
+        font-size: 2rem;
+    }
+
+    .banner-texto p {
+        font-size: 1rem;
+    }
+
+    .banner-texto .cta {
+        font-size: 1.2rem;
+    }
+
+    .banner-container img {
+        height: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-section {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 80px;
+    }
+
+    .banner-texto {
+        left: 16px;
+        right: 16px;
+        top: auto;
+        bottom: 30px;
+        transform: none;
+        border-radius: 12px;
+    }
+
+    .banner-texto h2 {
+        font-size: 1.6rem;
+    }
+
+    .banner-texto p {
+        font-size: 0.95rem;
+    }
+
+    .banner-texto .cta {
+        font-size: 1rem;
+    }
+
+    .banner-container img {
         height: 420px;
-        overflow: hidden;
+        border-radius: 20px;
     }
 }

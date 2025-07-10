@@ -67,9 +67,14 @@
 }
 
 .form_enviar {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.cont-formt1 {
+    margin-top: 44px;
 }
 
 /* Responsivo */
