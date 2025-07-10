@@ -23,7 +23,7 @@ if (!empty($_POST['email'])) {
     try {
         // Configurações do servidor da HostGator
         $mail->isSMTP();
-        $mail->Host       = 'vegasmaringa@gruponex7.com.br'; // substitua pelo seu domínio real
+        $mail->Host       = 'mail.gruponex7.com.br'; // substitua pelo seu domínio real
         $mail->SMTPAuth   = true;
         $mail->Username   = 'vegasmaringa@gruponex7.com.br'; // e-mail criado no cPanel
         $mail->Password   = '"7w/rU"JahXli5G';            // senha definida no cPanel
