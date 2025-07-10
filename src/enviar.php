@@ -21,18 +21,21 @@ if (!empty($_POST['email'])) {
     $mail = new PHPMailer(true);
 
     try {
+        // Configurações do servidor da HostGator
         $mail->isSMTP();
-        $mail->Host       = 'smtp.gmail.com';
+        $mail->Host       = 'vegasmaringa@gruponex7.com.br'; // substitua pelo seu domínio real
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'kelwin.esechiel28@gmail.com'; // substitui
-        $mail->Password   = 'ezjxblpcbanwocul'; // na Hostinger, Senha do email criado na Hostinger
-        $mail->SMTPSecure = 'tls';
-        $mail->Port       = 587;
+        $mail->Username   = 'vegasmaringa@gruponex7.com.br'; // e-mail criado no cPanel
+        $mail->Password   = '"7w/rU"JahXli5G';            // senha definida no cPanel
+        $mail->SMTPSecure = 'ssl';                      // ou 'tls' se SSL não funcionar
+        $mail->Port       = 465;                         // ou 587 para TLS
 
-        $mail->setFrom('kelwin.esechiel28@gmail.com', 'Site Contato'); //substitui
-        $mail->addAddress('kelwin.esechiel8@gmail.com', 'Kelwin'); //substitui
+        // Configuração dos remetentes
+        $mail->setFrom('vegasmaringa@gruponex7.com.br', 'Site Contato');
+        $mail->addAddress('vegasmaringa@gruponex7.com.br', 'Empresa');
         $mail->addReplyTo($email, $nome . ' ' . $sobrenome);
 
+        // Conteúdo do e-mail
         $mail->isHTML(true);
         $mail->Subject = 'Nova mensagem do formulário de contato';
         $mail->Body    = "
