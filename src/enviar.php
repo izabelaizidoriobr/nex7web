@@ -22,13 +22,16 @@ if (!empty($_POST['email'])) {
 
     try {
         // Configurações do servidor da HostGator
+        $mail->SMTPDebug = 2; // ou 3 para mais detalhes
+$mail->CharSet = 'UTF-8';
+$mail->Debugoutput = 'html';
         $mail->isSMTP();
         $mail->Host       = 'mail.gruponex7.com.br'; // substitua pelo seu domínio real
         $mail->SMTPAuth   = true;
         $mail->Username   = 'vegasmaringa@gruponex7.com.br'; // e-mail criado no cPanel
-        $mail->Password   = '"7w/rU"JahXli5G';            // senha definida no cPanel
-        $mail->SMTPSecure = 'ssl';                      // ou 'tls' se SSL não funcionar
-        $mail->Port       = 465;                         // ou 587 para TLS
+        $mail->Password   = 'mar7#Vegas88';            // senha definida no cPanel
+       $mail->SMTPSecure = 'tls';
+$mail->Port       = 587;                      // ou 587 para TLS
 
         // Configuração dos remetentes
         $mail->setFrom('vegasmaringa@gruponex7.com.br', 'Site Contato');

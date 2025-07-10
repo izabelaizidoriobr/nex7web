@@ -1,54 +1,21 @@
 <?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+$mail = new PHPMailer\PHPMailer\PHPMailer();   
+$mail->IsSMTP(); // enable SMTP   
+$mail->SMTPDebug = 1; // debugging: 1 = errorsandmessages, 2 = messagesonly  
+$mail->SMTPAuth = true; // authenticationenabled   
+$mail->SMTPSecure = 'ssl'; //   
+$mail->Host = "smtp.titan.email";   
+$mail->Port = 465;   
+$mail->IsHTML(true);   
+$mail->Username = "vegasmaringa@gruponex7.com.br";   
+$mail->Password = "mar7#Vegas88";   
+$mail->SetFrom("vegasmaringa@gruponex7.com.br");   
+$mail->Subject = "Assunto da mensagem";   
+$mail->Body = "Escreva o texto do email aqui";   
+$mail->AddAddress("vegasmaringa@gruponex7.com.br");  
+if(!$mail->Send()) {  
+     echo "Mailer Error: " . $mail->ErrorInfo;    
+  }else {  
+    echo "Mensagem enviada com sucesso"; }
 
-require 'vendor/autoload.php'; // Verifique o caminho correto para seu autoload
-
-if (!empty($_POST['email'])) {
-    $nome     = htmlspecialchars($_POST['nome']);
-    $email    = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
-    $telefone = htmlspecialchars($_POST['telefone']);
-    $mensagem = htmlspecialchars($_POST['mensagem']);
-
-    if (!$email) {
-        die("Email inválido.");
-    }
-
-    $mail = new PHPMailer(true);
-
-    try {
-        // Configuração do servidor SMTP
-        $mail->isSMTP();
-        $mail->Host       = 'smtp.gmail.com';
-        $mail->SMTPAuth   = true;
-        $mail->Username   = 'kelwin.esechiel28@gmail.com'; // Substitua pelo seu
-        $mail->Password   = 'ezjxblpcbanwocul';            // Substitua pela senha correta
-        $mail->SMTPSecure = 'tls';
-        $mail->Port       = 587;
-
-        // Remetente e destinatário
-        $mail->setFrom('kelwin.esechiel28@gmail.com', 'Formulário do Site');
-        $mail->addAddress('kelwin.esechiel8@gmail.com', 'Kelwin');
-        $mail->addReplyTo($email, $nome);
-
-        // Conteúdo do email
-        $mail->isHTML(true);
-        $mail->Subject = 'Mensagem do site - Contato rápido';
-        $mail->Body    = "
-            <h2>Nova mensagem recebida:</h2>
-            <b>Nome:</b> {$nome}<br>
-            <b>Email:</b> {$email}<br>
-            <b>Telefone:</b> {$telefone}<br><br>
-            <b>Mensagem:</b><br> {$mensagem}
-        ";
-        $mail->AltBody = "Nome: {$nome}\nEmail: {$email}\nTelefone: {$telefone}\n\nMensagem:\n{$mensagem}";
-
-        $mail->send();
-        echo "<h3>Mensagem enviada com sucesso!</h3>";
-        echo '<a href="index.html">Voltar</a>';
-    } catch (Exception $e) {
-        echo "Erro ao enviar: {$mail->ErrorInfo}";
-    }
-} else {
-    echo "Formulário não enviado. Preencha todos os campos.";
-}
+    ?>
