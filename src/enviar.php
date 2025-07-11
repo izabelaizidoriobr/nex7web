@@ -1,72 +1,83 @@
 <?php
+session_start();
+ob_start();
+
+$agora = time();
+if (isset($_SESSION['ultimo_envio']) && ($agora - $_SESSION['ultimo_envio']) < 5) {
+    http_response_code(204);
+    exit;
+}
+$_SESSION['ultimo_envio'] = $agora;
+
+require("/home4/vegasm65/gruponex7.com.br/PHPMailer-master/src/PHPMailer.php");
+require("/home4/vegasm65/gruponex7.com.br/PHPMailer-master/src/SMTP.php");
+
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
 
-require 'vendor/autoload.php';
+$mail = new PHPMailer();
 
-if (!empty($_POST['email'])) {
-    $nome = htmlspecialchars($_POST['nome']);
-    $sobrenome = htmlspecialchars($_POST['sobrenome']);
-    $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
-    if (!$email) {
-        die("Email inválido");
+$mail->IsSMTP();
+$mail->SMTPDebug = 0;
+$mail->SMTPAuth = true;
+$mail->SMTPSecure = 'ssl';
+$mail->Host = "smtp.gmail.com";
+$mail->Port = 465;
+$mail->Username = "nex7.contato@gmail.com";
+$mail->Password = "gznsgsewhfcmkbql";
+$mail->IsHTML(true);
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    header('Content-Type: application/json');
+    ob_clean();
+
+    $nome       = $_POST['nome'] ?? '';
+    $sobrenome  = $_POST['sobrenome'] ?? '';
+    $email      = $_POST['email'] ?? '';
+    $empresa    = $_POST['empresa'] ?? '';
+    $segmento   = $_POST['segmento'] ?? '';
+    $cidade     = $_POST['cidade'] ?? '';
+    $estado     = $_POST['estado'] ?? '';
+    $referencia = $_POST['referencia'] ?? '';
+    $mensagem   = $_POST['mensagem'] ?? '';
+
+    $corpo = "
+        <strong>Mensagem:</strong><br> {$mensagem} <br><br>
+        <hr style='border: none; border-top: 1px solid #ccc; margin: 20px 0;'>
+        <strong>Nome:</strong> {$nome} {$sobrenome} <br>
+        <strong>Email:</strong> {$email} <br>
+        <strong>Empresa:</strong> {$empresa} <br>
+        <strong>Segmento:</strong> {$segmento} <br>
+        <strong>Cidade:</strong> {$cidade} <br>
+        <strong>Estado:</strong> {$estado} <br>
+        <strong>Referência:</strong> {$referencia}
+    ";
+
+    $mensagem_resumo = mb_substr(trim($mensagem), 0, 7) . '...';
+
+    $mail->SetFrom("nex7.contato@gmail.com", "Contato do Site");
+    $mail->addReplyTo($email, "$nome $sobrenome");
+    $mail->Subject = "$nome $sobrenome - $mensagem_resumo";
+    $mail->Body = $corpo;
+    $mail->AddAddress("nex7.contato@gmail.com");
+
+    if (!$mail->Send()) {
+        echo json_encode([
+            'success' => false,
+            'message' => "Erro ao enviar: " . $mail->ErrorInfo
+        ]);
+    } else {
+        echo json_encode([
+            'success' => true,
+            'message' => "Mensagem enviada com sucesso!"
+        ]);
     }
-    $empresa = htmlspecialchars($_POST['empresa']);
-    $segmento = htmlspecialchars($_POST['segmento']);
-    $cidade = htmlspecialchars($_POST['cidade']);
-    $estado = htmlspecialchars($_POST['estado']);
-    $referencia = htmlspecialchars($_POST['referencia']);
-    $mensagem = htmlspecialchars($_POST['mensagem']);
-
-    $mail = new PHPMailer(true);
-
-    try {
-        // Configurações do servidor da HostGator
-        $mail->SMTPDebug = 2; // ou 3 para mais detalhes
-$mail->CharSet = 'UTF-8';
-$mail->Debugoutput = 'html';
-        $mail->isSMTP();
-        $mail->Host       = 'mail.gruponex7.com.br'; // substitua pelo seu domínio real
-        $mail->SMTPAuth   = true;
-        $mail->Username   = 'vegasmaringa@gruponex7.com.br'; // e-mail criado no cPanel
-        $mail->Password   = 'mar7#Vegas88';            // senha definida no cPanel
-       $mail->SMTPSecure = 'tls';
-$mail->Port       = 587;                      // ou 587 para TLS
-
-        // Configuração dos remetentes
-        $mail->setFrom('vegasmaringa@gruponex7.com.br', 'Site Contato');
-        $mail->addAddress('vegasmaringa@gruponex7.com.br', 'Empresa');
-        $mail->addReplyTo($email, $nome . ' ' . $sobrenome);
-
-        // Conteúdo do e-mail
-        $mail->isHTML(true);
-        $mail->Subject = 'Nova mensagem do formulário de contato';
-        $mail->Body    = "
-            <h2>Nova mensagem recebida:</h2>
-            <b>Nome:</b> {$nome} {$sobrenome}<br>
-            <b>Email:</b> {$email}<br>
-            <b>Empresa:</b> {$empresa}<br>
-            <b>Segmento:</b> {$segmento}<br>
-            <b>Cidade:</b> {$cidade}<br>
-            <b>Estado:</b> {$estado}<br>
-            <b>Como ouviu falar:</b> {$referencia}<br><br>
-            <b>Mensagem:</b><br> {$mensagem}
-        ";
-        $mail->AltBody = "Nome: {$nome} {$sobrenome}\n".
-                         "Email: {$email}\n".
-                         "Empresa: {$empresa}\n".
-                         "Segmento: {$segmento}\n".
-                         "Cidade: {$cidade}\n".
-                         "Estado: {$estado}\n".
-                         "Como ouviu falar: {$referencia}\n\n".
-                         "Mensagem:\n{$mensagem}";
-
-        $mail->send();
-        echo "<h3>Mensagem enviada com sucesso!</h3>";
-        echo '<a href="index.html">Voltar</a>';
-    } catch (Exception $e) {
-        echo "Erro ao enviar: {$mail->ErrorInfo}";
-    }
+    exit;
 } else {
-    echo "Formulário não enviado. Verifique os campos.";
+    ob_clean();
+    header('Content-Type: application/json');
+    echo json_encode([
+        'success' => false,
+        'message' => "Requisição inválida."
+    ]);
+    exit;
 }
