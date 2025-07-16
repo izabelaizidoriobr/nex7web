@@ -105,6 +105,49 @@
     background-color: #b18b30;
 }
 
+
+/* cores */
+
+.theme-selector {
+    position: relative;
+    margin-left: 1rem;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #f5f5f5;
+}
+
+.theme-options {
+    position: absolute;
+    top: 2.5rem;
+    right: 0;
+    background-color: #1b1b1b;
+    list-style: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    display: none;
+    z-index: 1000;
+}
+
+.theme-options li {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    color: #f5f5f5;
+}
+
+.theme-options li:hover {
+    background-color: #333;
+}
+
+.theme-options.show {
+    display: block;
+}
+
+
 /* RESPONSIVO */
 @media (max-width: 1024px) {
 
