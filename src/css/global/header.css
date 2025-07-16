@@ -18,7 +18,7 @@
 
 /* Logo */
 .logo img {
-    height: 36px;
+    height: 46px;
 }
 
 /* BOTÃO MENU TOGGLE */
@@ -245,6 +245,6 @@
 
     /* Logo levemente menor no mobile (opcional) */
     .logo img {
-        height: 30px;
+        height: 36px;
     }
 }

@@ -66,6 +66,11 @@
     background-color: #DCBB4F;
 }
 
+.btn-enviar:disabled {
+    background-color: #7c704a;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
 .form_enviar {
     width: 100%;
     display: flex;

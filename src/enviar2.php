@@ -1,54 +1,77 @@
 <?php
+session_start();
+ob_start();
+
+// Bloqueio anti-duplicação por tempo (5 segundos)
+$agora = time();
+if (isset($_SESSION['ultimo_envio']) && ($agora - $_SESSION['ultimo_envio']) < 5) {
+    http_response_code(204); // Silenciosamente ignora segunda tentativa
+    exit;
+}
+$_SESSION['ultimo_envio'] = $agora;
+
+require("/home4/vegasm65/gruponex7.com.br/PHPMailer-master/src/PHPMailer.php");
+require("/home4/vegasm65/gruponex7.com.br/PHPMailer-master/src/SMTP.php");
+
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
 
-require 'vendor/autoload.php'; // Verifique o caminho correto para seu autoload
+$mail = new PHPMailer();
 
-if (!empty($_POST['email'])) {
-    $nome     = htmlspecialchars($_POST['nome']);
-    $email    = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
-    $telefone = htmlspecialchars($_POST['telefone']);
-    $mensagem = htmlspecialchars($_POST['mensagem']);
+$mail->IsSMTP();
+$mail->SMTPDebug = 0;
+$mail->SMTPAuth = true;
+$mail->SMTPSecure = 'ssl';
+$mail->Host = "smtp.gmail.com";
+$mail->Port = 465;
 
-    if (!$email) {
-        die("Email inválido.");
+$mail->Username = "nex7.contato@gmail.com";
+$mail->Password = "gznsgsewhfcmkbql";
+
+$mail->IsHTML(true);
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    header('Content-Type: application/json');
+    ob_clean();
+
+    $nome     = $_POST['nome'] ?? '';
+    $email    = $_POST['email'] ?? '';
+    $telefone = $_POST['telefone'] ?? '';
+    $mensagem = $_POST['mensagem'] ?? '';
+$corpo = "
+    <strong>Mensagem:</strong><br> {$mensagem} <br><br>
+    <hr style='border: none; border-top: 1px solid #ccc; margin: 20px 0;'>
+    <strong>Nome:</strong> {$nome} <br>
+    <strong>Email:</strong> {$email} <br>
+    <strong>Telefone:</strong> {$telefone}
+";
+
+    $mail->SetFrom("nex7.contato@gmail.com", "Contato do Site");
+    $mail->addReplyTo($email, $nome);
+
+   
+    $mail->Subject = "$nome";
+
+    $mail->Body = $corpo;
+    $mail->AddAddress("nex7.contato@gmail.com");
+
+    if (!$mail->Send()) {
+        echo json_encode([
+            'success' => false,
+            'message' => "Erro ao enviar: " . $mail->ErrorInfo
+        ]);
+    } else {
+        echo json_encode([
+            'success' => true,
+            'message' => "Mensagem enviada com sucesso!"
+        ]);
     }
-
-    $mail = new PHPMailer(true);
-
-    try {
-        // Configuração do servidor SMTP
-        $mail->isSMTP();
-        $mail->Host       = 'smtp.gmail.com';
-        $mail->SMTPAuth   = true;
-        $mail->Username   = 'kelwin.esechiel28@gmail.com'; // Substitua pelo seu
-        $mail->Password   = 'ezjxblpcbanwocul';            // Substitua pela senha correta
-        $mail->SMTPSecure = 'tls';
-        $mail->Port       = 587;
-
-        // Remetente e destinatário
-        $mail->setFrom('kelwin.esechiel28@gmail.com', 'Formulário do Site');
-        $mail->addAddress('kelwin.esechiel8@gmail.com', 'Kelwin');
-        $mail->addReplyTo($email, $nome);
-
-        // Conteúdo do email
-        $mail->isHTML(true);
-        $mail->Subject = 'Mensagem do site - Contato rápido';
-        $mail->Body    = "
-            <h2>Nova mensagem recebida:</h2>
-            <b>Nome:</b> {$nome}<br>
-            <b>Email:</b> {$email}<br>
-            <b>Telefone:</b> {$telefone}<br><br>
-            <b>Mensagem:</b><br> {$mensagem}
-        ";
-        $mail->AltBody = "Nome: {$nome}\nEmail: {$email}\nTelefone: {$telefone}\n\nMensagem:\n{$mensagem}";
-
-        $mail->send();
-        echo "<h3>Mensagem enviada com sucesso!</h3>";
-        echo '<a href="index.html">Voltar</a>';
-    } catch (Exception $e) {
-        echo "Erro ao enviar: {$mail->ErrorInfo}";
-    }
+    exit;
 } else {
-    echo "Formulário não enviado. Preencha todos os campos.";
+    ob_clean();
+    header('Content-Type: application/json');
+    echo json_encode([
+        'success' => false,
+        'message' => "Requisição inválida."
+    ]);
+    exit;
 }
